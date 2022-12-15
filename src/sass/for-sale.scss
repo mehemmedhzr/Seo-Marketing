@@ -1,0 +1,218 @@
+@import "variables";
+@import "mixins";
+
+// For Sale starts
+
+.for-sale-header{
+    background-image: url(../img/for-sale-bg.png);
+    padding-top: 20px;
+    padding-bottom: 140px;   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fs-article-header{
+    @include font900(56px, 73px, #FFFFFF);
+}
+
+// For Sale Side by Side Components starts
+
+.fs-sidebyside-components{
+    padding-top: 100px;
+    padding-bottom: 180px;
+    position: relative;
+}
+
+.fs-left-line{
+    max-width: 860px;
+    position: relative;
+    z-index: 10;
+}
+
+.left-line-stats{
+    gap: 60px;
+    max-width: 705px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.stats-components{
+    gap: 20px;
+}
+
+.left-line-stat-header{
+    @include font900(32px, 42px, $headerFontColor);
+}
+
+.left-line-stat-text{
+    @include font400(20px, 30px, $headerFontColor);
+}
+
+.left-line-top-text{
+    margin-top: 80px;
+    max-width: 705px;
+}
+
+.left-line-top-text-header{
+    @include font700(20px, 30px, $headerFontColor);
+}
+
+.left-line-top-text-paragraph{
+    @include paragraphFont(#424551);
+}
+
+.fs-final-result-diagram{
+    margin-top: 80px;
+    box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+    border-radius: 4px;
+    img{
+        width: 100%;
+    }
+}
+
+.fs-strategies{
+    margin-top: 80px;
+    max-width: 705px;
+}
+
+.strategies-article{
+    margin-bottom: 80px
+}
+
+.strategies-header{
+    @include font900(32px, 42px, $headerFontColor);
+}
+
+.strategy-opportunities{
+    p{
+        span{
+            @include paragraphFont(#424551);
+            margin-left: 1em;
+        }
+    }
+}
+
+.strategies-paragraph{
+    @include paragraphFont(#424551);
+}
+
+.strategies-figure{
+    img{
+        width: 100%;
+    }
+}
+
+.resieved-goals{
+    max-width: 705px;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.fs-results{
+    max-width: 705px;
+    width: 100%;
+}
+
+.fs-right-line{
+    max-width: 390px;
+    margin-left: 80px;
+    position: relative;
+    z-index: 10;
+}
+
+.right-line-grey{
+    background-color: #F4F5F7;
+    padding: 40px 32px;
+    position: relative;
+    z-index: 10;
+}
+
+.about-client-header{
+    @include font700(24px, 31px, $headerFontColor);
+    margin-bottom: 12px;
+}
+
+.about-client-paragraph{
+    @include font400(14px, 21px, #424551);
+}
+
+.fs-hashtags{
+    button{
+        background-color: transparent;
+        border: 1px solid #D7DADD;
+        border-radius: 4px; 
+        padding: 5.5px 16px;
+        margin-right: 12px;
+        span{
+            @include font700(14px, 21px, $mainParagraphColor);
+        }     
+        &:active, &:hover{
+            border-color: $primaryColor;
+            background-color: $primaryColor;
+            span{
+                color: #FFFFFF;
+            }
+        }   
+    }
+}
+
+.fs-sharing{
+    span{
+        @include font700(20px, 30px, $headerFontColor);
+        margin-right: 12px;
+    }
+    a{
+        text-decoration: none;
+        margin-right: 12px;
+    }
+}
+
+.fs-sidebyside-container{
+    position: relative;
+}
+
+.fs-line-bg-figure{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.fs-side-main-bg{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+// For Sale Lower Gray starts
+
+.fs-lower-gray{
+    background-color: #F4F5F7;
+    padding:180px 0;
+    position: relative;
+}
+
+.fs-slider-article{
+    margin-top: 86px;
+    position: relative;
+    z-index: 10;
+}
+
+.lower-gray-top, .lower-gray-mid{
+    position: absolute;
+}
+
+.lower-gray-top{
+    top: 0;
+    left: 0;
+    img{
+        max-width: 100%;
+    }
+}
+
+.lower-gray-mid{
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -1,0 +1,142 @@
+@import "variables";
+@import "mixins";
+
+// Case Studies start
+
+.case-studies-header{
+    background-image: url(../img/case-studies-bg.png);
+    padding-top: 20px;
+    padding-bottom: 80px;   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+// Case Studies Documents start
+
+.cs-documents{
+    margin-top: 100px;
+}
+
+.case-service-nav-ul{
+   li{
+        flex: 0 0 16.6% !important;
+   }
+}
+
+.doc-card-gap{
+    gap: 48px 0;
+}
+
+.card-item-inside{
+    border: 1px solid #E5E8ED;
+    box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+    border-radius: 4px;
+    max-width: 600px;
+}
+
+.card-item-figure{
+    position: relative; 
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    background-size: cover;
+    padding: 28px 0 0 40px;
+    border-radius: 4px 4px 0px 0px;
+    p{
+        @include font400(14px, 21px, #FFFFFF);
+        z-index: 10;
+    }
+    &::before {    
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        opacity: 0.6;
+  }
+}
+
+.card-item-article{
+    padding: 24px 40px 28px 40px;
+}
+
+.item-article-stat{
+    &::after{
+        display: inline-block;
+        content: '';
+        background-image: linear-gradient(to right, rgba(218, 219, 221, 0), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 1), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 0));
+        width: 100%;
+        height: 1px;
+        margin-top: 24px;
+    }
+}
+
+.article-stat-2{
+    margin-left: 32px;
+}
+
+.item-article-textandbtn{
+    margin-top: 20px;
+    p{
+        margin-bottom: 20px;
+        @include paragraphFont($mainParagraphColor);
+    }
+    a{
+        border: none;
+        background-color: transparent;
+        text-decoration: none;
+        span{
+            @include font700(16px, 26px, $headerFontColor);
+        }
+    }
+}
+
+.item-figure-1{
+    background-image: url(../img/cs-card-item-bg1.png);
+}
+.item-figure-2{
+    background-image: url(../img/cs-card-item-bg2.png);
+}
+.item-figure-3{
+    background-image: url(../img/cs-card-item-bg3.png);
+}
+.item-figure-4{
+    background-image: url(../img/cs-card-item-bg4.png);
+}
+.item-figure-5{
+    background-image: url(../img/cs-card-item-bg5.png);
+}
+.item-figure-6{
+    background-image: url(../img/cs-card-item-bg6.png);
+}
+
+.cs-doc-btn{
+    margin-top: 60px;
+    background-color: transparent;
+    border: none;
+    gap: 16px;
+    span{
+        @include font700(16px, 26px, #424551);
+    }
+}
+
+// Case Studies Lower Part starts
+
+.cs-lower-part{
+    background-color:#F4F5F7;
+    padding-top: 80px;
+    margin-top: 100px;
+}
+
+.cs-carousel-package{
+    background-image: url(../img/cs-clients-comments-bg.png);
+    display: flex;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 60 0 80;
+}
+

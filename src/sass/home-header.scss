@@ -1,0 +1,220 @@
+@import "variables";
+@import "mixins";
+
+.home-header{
+    padding-top: 20px;
+    padding-bottom: 80px;
+    background-image: url(../img/background-hp-header.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.header-logo{
+    object-fit: contain;
+}
+
+.header-links{
+    margin-left: 60px;
+    >ul{
+        gap: 40px;
+        margin-bottom: 0;
+        .nav-dropmenu{
+            >button{
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 26px;
+                background-color: transparent;
+                border: none;
+                padding: 0;
+            }
+            .dropdown-toggle::after{
+                border: none;
+                content:  url(../img/nav-dropmenu-btn-logo.svg);
+                margin-left: 10.67px;
+                vertical-align: 0;
+                margin-left: 4px;
+                opacity: .6;
+                transition: all .4s ease;
+            }
+            &:hover{
+                .dropdown-toggle::after{
+                    opacity: 1;
+                }
+            }
+        }
+        >li{
+            >a{
+                text-decoration: none;
+                color: #FFFFFF;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 26px;
+                opacity: .6;
+                transition: all .4s ease;
+                &:hover{
+                    color: #FFFFFF;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.header-link-service{
+    text-decoration: none;
+    opacity: .6;
+    transition: all .4s ease;
+    @include font700(16px, 26px, #FFFFFF);
+    &:hover{
+        color: #FFFFFF;
+        opacity: 1;
+    }
+}
+
+.header-button{
+    >button{
+        @include buttonHeader($primaryColor, #FFFFFF);
+        border: 1px solid transparent;
+        transition: all .5s ease;
+        &:hover{
+            background-color: #FFFFFF;
+            color: $primaryColor;
+            border: 1px solid $primaryColor;
+        }
+    }
+}
+
+.hamburger{
+    display: none;
+}
+
+.header-section{
+    padding-top: 200px;
+    padding-bottom: 388px;
+    position: relative;
+    background-image: url(../img/header-bg-illustration.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    z-index: 5;
+}
+
+.nav-ul-bg{
+    background-color: $primaryColor;
+    li{
+        a{
+            color: #FFFFFF;
+        }
+    }
+}
+
+.header-article{
+    max-width: 810px;
+    margin-bottom: 0;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 94px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    >span{
+        color: $primaryColor;
+    }
+}
+
+.header-sec-ply{
+    margin-top: 60px
+}
+
+.get-anlyss{
+    @include buttonHeader(transparent, #FFFFFF);
+    border: 1px solid #FFFFFF;
+    text-decoration: none;
+    transition: all .5s ease;
+    &:hover{
+        background-color: transparent;
+        color: $primaryColor;
+        border-color: $primaryColor;
+    }
+}
+@keyframes ripple {
+    from {
+      opacity: 1;
+      transform: scale3d(0.75, 0.75, 1);
+    }
+    to {
+      opacity: 0;
+      transform: scale3d(1.5, 1.5, 1);
+    }
+  }
+
+.ply-btn{
+    background-color: $primaryColor;
+    border-radius: 50%;
+    padding: 16px 18px 16px 19px;
+    border-color: transparent; 
+    position: relative; 
+    transition: all 500ms ease;
+    margin-left: 40px;
+    >img{
+        object-fit: contain;
+    }
+    &:hover::before{
+        animation-duration: 2.5s;
+        opacity: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        content: "";
+        border: 16px solid $primaryColor;
+        border-radius: 50%;
+        animation-name: ripple;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        z-index: 3;
+    }
+    &:hover::after{
+        animation-duration: 2.5s;
+        animation-delay: 1s;
+        opacity: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        right: -10px;
+        bottom: -10px;
+        content: "";
+        border: 16px solid $primaryColor;
+        border-radius: 50%;
+        animation-name: ripple;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease;
+        z-index: 3;
+    }
+}
+
+.ply-btn-text{
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.h-footer-text{
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+

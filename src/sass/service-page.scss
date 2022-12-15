@@ -1,0 +1,209 @@
+@import "variables";
+@import "mixins";
+
+// Service Page Header starts 
+
+.service-page-header{
+    background-image: url(../img/services-page-header-bg.png);
+}
+
+.breadcrumb-item+.breadcrumb-item::before{
+    content: url(../img/breadcrumb-mediate-icon.svg);
+}
+
+.breadcrumb-item{
+    display: flex;
+    align-items: center;
+    a{
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        color: #FFFFFF;
+        opacity: 0.6;
+    }
+}
+
+.sp-header-main{
+    margin-top: 80px;
+}
+
+.sp-header-article{
+    margin-top: 40px;
+    max-width: 810px;
+}
+
+.sp-article-header{
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 94px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+
+.sp-article-paragraph{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    opacity: 0.6;
+    margin-bottom: 60px;
+}
+
+.sp-header-contact{
+    max-height: 52px;
+}
+
+.sp-header-contact-btn{
+    margin-right: 20px;
+    @include buttonHeader(transparent, #FFFFFF);
+    border-color: #FFFFFF;
+    border-width: 1px;
+    a{
+        text-decoration: none;
+        @include font700(16px, 52px, #FFFFFF);
+    }
+}
+
+.contact-phone-call{
+    width: 178px;
+    margin-left: 20px;
+    img{
+        object-fit: contain;
+    }
+}
+
+.contact-call-us{
+    margin-left: 6px;
+    p{
+        @include font700(14px, 21px, #FFFFFF);
+        opacity: 0.6;
+        margin-bottom: 0;
+    }
+    a{
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: #FFFFFF;
+    }
+}
+
+// Service Page Main starts 
+
+.sp-main{
+    padding-top: 100px;
+}
+
+// Service Page Options start
+
+.sp-option-type1, .sp-option-type2{
+    margin-bottom: 150px;
+}
+
+.option-type1-article, .option-type2-article{
+    max-width: 575px;
+}
+
+.type1-img{
+    max-width: 712px;
+    max-height: 420px;
+    margin-left: 80px;
+    img{
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.type2-img{
+    margin-right: 80px;
+    max-width: 712px;
+    max-height: 420px;
+    img{
+        max-width: 100%;
+        max-height: 100%;
+        // width: 706px;
+        // height: 419px;
+    }
+}
+
+.type1-article-header, .type2-article-header{
+    @include font900(32px, 42px, $headerFontColor);
+}
+
+.type1-article-text, .type2-article-text{
+    @include paragraphFont($mainParagraphColor);
+}
+
+.sp-learn-more-btn{
+    @include smallBtn(transparent, $primaryColor, $primaryColor);
+    border-width: 1px;
+    a{
+        text-decoration: none;
+        color: $primaryColor;
+    }
+}
+
+.sp-try-btn{
+    @include smallBtn($primaryColor, #FFFFFF, $primaryColor);
+    border-width: 1px;
+}
+
+// Service Page Operating Markets start
+
+.operating-markets{
+    margin-top: 180px;
+    margin-bottom: 120px
+}
+
+.sp-markets-header{
+    @include headerFont($headerFontColor);
+    margin-bottom: 60px;
+}
+
+.market-item{
+    display: flex;
+    margin-right: 45px;
+
+}
+
+.market-item-linear{
+    &::after{
+        display: inline-block;
+        content: '';
+        width: 1px;
+        height: 100%;
+        background-image: linear-gradient(to bottom, rgba(218, 219, 221, 0), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 1), rgba(218, 219, 221, 0.5), rgba(218, 219, 221, 0));
+        margin-left: 45px;
+    }
+}
+
+.market-item-inside{
+    max-width: 240px;
+}
+
+.market-item-img{
+    object-fit: contain
+}
+
+.market-item-header{
+    @include font700(20px, 30px, $headerFontColor);
+}
+
+.market-item-paragraph{
+    @include font400(16px, 26px, $mainParagraphColor);
+}
+
+// Service Page Partners start
+
+.sp-partners{
+    margin-top: 120px;
+}
+
+// Service Page Latest-News start
+
+.sp-latest-news{
+    margin-top: 170px;
+}
+

@@ -1,0 +1,78 @@
+@import "variables";
+@import "mixins";
+
+// About Us Starts
+
+.about-us-header{
+    background-image: url(../img/about-us-bg.png);
+    padding-top: 20px;
+    padding-bottom: 140px;   
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.au-article-paragraph{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+    opacity: .6;
+    margin-bottom: 120px;
+}
+
+.au-main{
+    padding-top: 120px;
+}
+
+// About Us Statistics start
+
+.au-stat-figures{
+    gap: 48px;
+}
+
+.au-stat-item-text{
+    @include font400(14px, 21px, #424551);
+}
+
+.custom-video-img {
+    height: 500px;
+    overflow: hidden;
+}
+
+.custom-video-img img{
+    width: 100%;
+    height: 100%;
+    // -o-object-fit: cover;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.custom-video-img .mute-btn {
+    bottom: 24px;
+    left: 32px;
+    width: 40px;
+    height: 40px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.custom-video-btn {
+    top: 40%;
+    left: 45%;
+    max-width: 90px;
+}
+
+.custom-video-btn button {
+    background: none;
+    border: none;
+    position: relative;
+}
+
+.custom-video-btn button img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    overflow: hidden;
+}
